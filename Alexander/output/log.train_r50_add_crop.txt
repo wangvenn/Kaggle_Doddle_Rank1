@@ -1,0 +1,939 @@
+
+--- [START 2018-11-14_15-37-47] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+
+--- [START 2018-11-14_15-37-47] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+
+--- [START 2018-11-14_15-37-47] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+
+--- [START 2018-11-14_15-45-11] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+
+--- [START 2018-11-14_15-45-45] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+
+--- [START 2018-11-14_15-45-45] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+
+--- [START 2018-11-14_15-45-45] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+
+--- [START 2018-11-14_16-06-06] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+
+--- [START 2018-11-14_16-07-08] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+	initial_checkpoint = ../../output/backup/873_crop.pth
+
+--- [START 2018-11-14_16-07-08] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f648c4e20d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f648c4e20d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_16-20-07] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f80762870d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_16-20-07] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 256
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f80762870d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=66406.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_16-20-07] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 256
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+
+--- [START 2018-11-14_16-40-13] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 256
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f6cd1ffe048>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=66406.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_16-49-15] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7fef9df51048>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_16-50-18] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7ff34385e0d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_16-51-46] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f2523f080d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_16-51-46] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f2523f080d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_16-51-46] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f2523f080d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_17-04-04] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f85633320d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_17-07-17] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f05866e4048>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+0.0010   0.1    0.0 | 5.831  0.003  0.011  (0.006)   | 5.861  0.003  0.008  (0.005)  |  0 hr 02 min
+0.0010   0.2    0.0 | 5.822  0.004  0.012  (0.008)   | 5.848  0.003  0.010  (0.006)  |  0 hr 04 min
+
+--- [START 2018-11-14_17-12-56] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7ff04604a0d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+0.0010   0.1    0.0 | 5.831  0.003  0.010  (0.006)   | 5.860  0.003  0.009  (0.005)  |  0 hr 02 min
+0.0010   0.2    0.0 | 5.823  0.004  0.011  (0.007)   | 5.853  0.003  0.008  (0.005)  |  0 hr 04 min
+
+--- [START 2018-11-14_17-18-07] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f99eb9fd048>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=53125.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+0.0010   0.1    0.0 | 5.829  0.004  0.011  (0.007)   | 5.861  0.003  0.009  (0.005)  |  0 hr 01 min
+
+--- [START 2018-11-14_17-20-57] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f72f418a0d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=265625.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+
+--- [START 2018-11-14_17-22-44] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f6fd7e9f0d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=265625.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+0.0010   0.1    0.0 | 5.827  0.004  0.011  (0.007)   | 5.860  0.004  0.009  (0.006)  |  0 hr 01 min
+0.0010   0.2    0.0 | 5.816  0.005  0.013  (0.008)   | 5.838  0.003  0.011  (0.007)  |  0 hr 02 min
+0.0010   0.3    0.0 | 5.805  0.007  0.019  (0.012)   | 5.836  0.003  0.010  (0.006)  |  0 hr 04 min
+0.0010   0.4    0.0 | 5.793  0.012  0.028  (0.019)   | 5.823  0.004  0.013  (0.008)  |  0 hr 05 min
+
+--- [START 2018-11-14_17-28-48] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7ff7f8799048>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.001, decay=0.100, step=265625.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+0.0010   0.5    0.0 | 5.783  0.017  0.038  (0.026)   | 5.810  0.004  0.011  (0.007)  |  0 hr 05 min
+0.0010   1.0    0.0 | 5.555  0.060  0.122  (0.087)   | 5.673  0.012  0.028  (0.019)  |  0 hr 10 min
+0.0010   1.5    0.1 | 4.663  0.156  0.262  (0.202)   | 5.159  0.038  0.075  (0.054)  |  0 hr 16 min
+0.0010   2.0    0.1 | 3.683  0.276  0.440  (0.348)*  | 4.354  0.110  0.192  (0.145)  |  0 hr 21 min
+0.0010   2.5    0.1 | 2.892  0.389  0.588  (0.476)   | 3.801  0.123  0.210  (0.161)  |  0 hr 26 min
+0.0010   3.0    0.1 | 2.406  0.466  0.676  (0.559)   | 3.426  0.199  0.313  (0.248)  |  0 hr 32 min
+0.0010   3.5    0.1 | 2.093  0.526  0.731  (0.617)   | 3.264  0.165  0.259  (0.207)  |  0 hr 37 min
+0.0010   4.0    0.2 | 1.849  0.571  0.767  (0.659)*  | 2.608  0.181  0.265  (0.218)  |  0 hr 42 min
+0.0010   4.5    0.2 | 1.712  0.598  0.791  (0.685)   | 2.910  0.258  0.377  (0.310)  |  0 hr 48 min
+0.0010   5.0    0.2 | 1.622  0.619  0.806  (0.703)   | 2.646  0.229  0.328  (0.273)  |  0 hr 53 min
+0.0010   5.5    0.2 | 1.514  0.640  0.820  (0.721)   | 2.341  0.303  0.421  (0.356)  |  0 hr 58 min
+0.0010   6.0    0.2 | 1.504  0.650  0.830  (0.731)*  | 2.313  0.325  0.433  (0.374)  |  1 hr 04 min
+0.0010   6.5    0.2 | 1.421  0.665  0.839  (0.744)   | 2.370  0.234  0.320  (0.273)  |  1 hr 09 min
+
+--- [START 2018-11-14_19-08-33] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7f01588a00d0>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.010, decay=0.100, step=265625.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+0.0100   0.5    0.0 | 2.042  0.539  0.745  (0.631)   | 3.107  0.215  0.324  (0.263)  |  0 hr 05 min
+0.0100   1.0    0.0 | 1.436  0.655  0.836  (0.737)   | 2.363  0.245  0.337  (0.286)  |  0 hr 10 min
+0.0100   1.5    0.1 | 1.290  0.691  0.858  (0.766)   | 2.403  0.260  0.344  (0.298)  |  0 hr 16 min
+0.0100   2.0    0.1 | 1.205  0.705  0.868  (0.780)*  | 2.055  0.383  0.485  (0.429)  |  0 hr 21 min
+0.0100   2.5    0.1 | 1.145  0.720  0.879  (0.793)   | 2.089  0.303  0.384  (0.340)  |  0 hr 26 min
+
+--- [START 2018-11-14_19-38-25] ----------------------------------------------------------------
+
+	SEED         = 35202
+	PROJECT_PATH = /data/ml-arsenal/projects/Doodle/Venn/code
+	__file__     = 25k_mixup
+	out_dir      = ../../output
+
+	<additional comments>
+	  ... xxx baseline  ... 
+
+** dataset setting **
+batch_size = 320
+train_dataset : 
+	split        = train_0
+	mode         = train
+	complexity   = simplified
+	len(self.id) = 8500000
+
+
+valid_dataset : 
+	split        = valid_0
+	mode         = valid
+	complexity   = simplified
+	len(self.id) = 27200
+
+
+
+** net setting **
+<class 'model_seresnext50.Net'>
+criterion=<function softmax_cross_entropy_criterion at 0x7fe9b1629048>
+
+schduler
+  (Exp) Decay Learning Rates
+base_lr=0.010, decay=0.100, step=265625.000
+
+** start training here! **
+                    |------------ VALID -------------|-------- TRAIN/BATCH ----------|         
+rate   iter  epoch  | loss   acc-1  acc-3   lb       | loss   acc-1  acc-3   lb      |  time   
+----------------------------------------------------------------------------------------------------
+0.0100   0.5    0.0 | 2.026  0.536  0.747  (0.631)   | 3.083  0.214  0.325  (0.262)  |  0 hr 05 min
+0.0100   1.0    0.0 | 1.441  0.653  0.837  (0.736)   | 2.364  0.244  0.341  (0.287)  |  0 hr 10 min
+0.0100   1.5    0.1 | 1.294  0.688  0.858  (0.765)   | 2.396  0.264  0.346  (0.301)  |  0 hr 16 min
+0.0100   2.0    0.1 | 1.194  0.708  0.873  (0.783)*  | 2.064  0.380  0.489  (0.429)  |  0 hr 21 min
+0.0100   2.5    0.1 | 1.145  0.721  0.879  (0.793)   | 2.096  0.298  0.383  (0.336)  |  0 hr 26 min
+0.0100   3.0    0.1 | 1.140  0.729  0.882  (0.799)   | 2.077  0.368  0.472  (0.415)  |  0 hr 32 min
+0.0100   3.5    0.1 | 1.102  0.740  0.889  (0.808)   | 2.165  0.293  0.371  (0.328)  |  0 hr 37 min
+0.0100   4.0    0.2 | 1.042  0.741  0.891  (0.810)*  | 1.614  0.273  0.337  (0.302)  |  0 hr 42 min
+0.0100   4.5    0.2 | 1.008  0.747  0.895  (0.815)   | 2.069  0.371  0.474  (0.417)  |  0 hr 47 min
+0.0100   5.0    0.2 | 1.035  0.750  0.896  (0.817)   | 1.921  0.322  0.403  (0.358)  |  0 hr 53 min
+0.0100   5.5    0.2 | 0.987  0.754  0.898  (0.820)   | 1.670  0.402  0.487  (0.440)  |  0 hr 58 min
+0.0100   6.0    0.2 | 1.028  0.753  0.898  (0.820)*  | 1.724  0.399  0.490  (0.440)  |  1 hr 03 min
+0.0100   6.5    0.2 | 0.974  0.759  0.902  (0.824)   | 1.826  0.291  0.359  (0.322)  |  1 hr 09 min
+0.0100   7.0    0.3 | 0.970  0.761  0.901  (0.825)   | 1.560  0.315  0.391  (0.349)  |  1 hr 14 min
+0.0100   7.5    0.3 | 0.976  0.762  0.902  (0.827)   | 1.556  0.348  0.427  (0.384)  |  1 hr 19 min
+0.0100   8.0    0.3 | 0.966  0.765  0.903  (0.828)*  | 1.713  0.321  0.391  (0.353)  |  1 hr 25 min
+0.0100   8.5    0.3 | 0.956  0.766  0.905  (0.830)   | 1.601  0.331  0.403  (0.364)  |  1 hr 30 min
+0.0100   9.0    0.3 | 0.928  0.766  0.907  (0.831)   | 1.577  0.321  0.392  (0.353)  |  1 hr 35 min
+0.0100   9.5    0.4 | 0.927  0.770  0.908  (0.833)   | 1.516  0.295  0.360  (0.325)  |  1 hr 41 min
+0.0100  10.0    0.4 | 0.920  0.773  0.909  (0.835)*  | 1.956  0.278  0.346  (0.308)  |  1 hr 46 min
+0.0100  10.5    0.4 | 0.916  0.772  0.909  (0.835)   | 1.679  0.380  0.459  (0.416)  |  1 hr 51 min
+0.0100  11.0    0.4 | 0.898  0.776  0.910  (0.837)   | 1.643  0.399  0.485  (0.438)  |  1 hr 57 min
+0.0100  11.5    0.4 | 0.900  0.773  0.911  (0.836)   | 1.956  0.333  0.417  (0.371)  |  2 hr 02 min
+0.0100  12.0    0.5 | 0.913  0.774  0.910  (0.836)*  | 1.849  0.392  0.480  (0.432)  |  2 hr 07 min
+0.0100  12.5    0.5 | 0.892  0.777  0.910  (0.838)   | 1.764  0.423  0.521  (0.467)  |  2 hr 12 min
+0.0100  13.0    0.5 | 0.894  0.779  0.912  (0.840)   | 1.739  0.214  0.278  (0.243)  |  2 hr 18 min
