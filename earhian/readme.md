@@ -7,8 +7,3 @@ results:
 | xception(2TTA) | 96  | 110k| 0.891 | 0.940 |
 | xception(10TTA)| 96  | 110k| 0.891 | 0.941 |
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
