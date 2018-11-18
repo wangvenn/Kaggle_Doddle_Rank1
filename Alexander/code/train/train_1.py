@@ -13,16 +13,16 @@ from data   import *
 from imgaug import augmenters as iaa
 
 ##----------------------------------------
-from model_seresnext50 import *
-# from model_resnet34 import *
+#from model_seresnext50 import *
+from model_densenet121 import *
 import gc
 
 
 # In[2]:
 
 
-FILE_NAME = '25k_mixup'
-
+FILE_NAME = '80k'
+SIZE = 96
 
 # In[3]:
 
@@ -58,7 +58,7 @@ def valid_augment(drawing, label, index):
     iaa.Crop(percent=(0.05, 0.05, \
                       0.05, 0.05), keep_size=True)
     ])
-    image = drawing_to_image_with_color_aug(drawing, 96, 96, seq)
+    image = drawing_to_image_with_color_aug(drawing, SIZE, SIZE, seq)
     return image, label, None
 
 
@@ -72,7 +72,7 @@ def train_augment(drawing, label, index):
                       (1-up_rand)*percent_crop, (1-right_rand)*percent_crop), keep_size=True)
     ])
     
-    image = drawing_to_image_with_color_aug(drawing, 96, 96, seq)
+    image = drawing_to_image_with_color_aug(drawing, SIZE, SIZE, seq)
 #     image = drawing_to_image_with_color_v2(drawing, 96, 96)
     return image, label, None
 
@@ -138,14 +138,14 @@ def do_valid( net, valid_loader, criterion ):
 
 fold    = 0
 out_dir =     '../../output'
-initial_checkpoint = None #\
+initial_checkpoint = None#'/data/Kaggle_Doddle_Rank1/Alexander/output/checkpoint/00132000_model.pth'#None #\
         #'../../output/backup/873_crop.pth'
 
 pretrain_file = None
 
 batch_size = 256+64
-epoch = 20
-num_iters   = epoch * 340 * 25000 // batch_size
+epoch = 3
+num_iters   = epoch * 340 * 100000 // batch_size
 
 #     schduler  = NullScheduler(lr=0.01)
 schduler = DecayScheduler(base_lr=0.01, decay=0.1, step=num_iters/2)
@@ -342,7 +342,7 @@ while  iter<num_iters:
         rate = get_learning_rate(optimizer)
 
 
-
+        """
         # one iteration update  -------------
         #net.set_mode('train',is_freeze_bn=True)
         net.set_mode('train')
@@ -377,6 +377,39 @@ while  iter<num_iters:
         #optimizer.step()
         #optimizer.zero_grad()
         #torch.nn.utils.clip_grad_norm(net.parameters(), 1)
+        """
+        net.set_mode('train')
+        input = input.cuda()
+        truth = truth.cuda()
+        #inputs, targets_a, targets_b, lam = mixup_data(input, truth, 0.2, True)
+
+        #logit = data_parallel(net,inputs.cuda())#net(input)#data_parallel(net,input) #net(input)
+        #del input
+        #targets_a = targets_a.cuda() 
+        #loss = mixup_criterion(criterion, logit, targets_a, targets_b.cuda(), lam)
+        #precision, top = metric(logit, targets_a)
+        #loss.backward()
+        #optimizer.step()
+        #optimizer.zero_grad()
+
+
+        #del logit, targets_a, targets_b
+        #gc.collect()
+        logit = data_parallel(net,input)
+        loss = criterion(logit,truth)
+        precision, top = metric(logit, truth)
+
+        #with torch.no_grad():
+        #    input = input.cuda()
+        #    truth = truth.cuda()
+        #    logit = data_parallel(net, input)
+        #    #loss  = criterion(logit, truth)
+        #    precision, top = metric(logit, truth)
+
+
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
 
 
         # print statistics  ------------
