@@ -1,3 +1,22 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[14]:
+
+
+import sys
+sys.path.append("..")
+
+
+# In[15]:
+
+
+FILE_NAME = '80k'
+
+
+# In[16]:
+
+
 from common import *
 
 ## https://www.kaggle.com/c/quickdraw-doodle-recognition/data
@@ -5,12 +24,11 @@ from common import *
 ## https://github.com/googlecreativelab/quickdraw-dataset
 
 
-#DATA_DIR = '/root/share/project/kaggle/google_doodle/data'
+DATA_DIR = '../'
 
 
 
-CLASS_NAME=\
-['The_Eiffel_Tower', 'The_Great_Wall_of_China', 'The_Mona_Lisa', 'airplane', 'alarm_clock', 'ambulance', 'angel',
+CLASS_NAME=['The_Eiffel_Tower', 'The_Great_Wall_of_China', 'The_Mona_Lisa', 'airplane', 'alarm_clock', 'ambulance', 'angel',
  'animal_migration', 'ant', 'anvil', 'apple', 'arm', 'asparagus', 'axe', 'backpack', 'banana', 'bandage', 'barn',
  'baseball', 'baseball_bat', 'basket', 'basketball', 'bat', 'bathtub', 'beach', 'bear', 'beard', 'bed', 'bee',
  'belt', 'bench', 'bicycle', 'binoculars', 'bird', 'birthday_cake', 'blackberry', 'blueberry', 'book',
@@ -162,8 +180,6 @@ def make_split():
     #class_name = ['apple','bee', 'cat', 'fish', 'frog', 'leaf']
     class_name = CLASS_NAME
     data_dir   = DATA_DIR
-
-    all_dir   = data_dir + '/split/train_simplified'
     train_dir = data_dir + '/split/train_0'
     valid_dir = data_dir + '/split/valid_0'
 
@@ -171,20 +187,19 @@ def make_split():
         name = name.replace('_', ' ')
         print(name)
 
-        df = pd.read_csv(DATA_DIR + '/csv/train_simplified/%s.csv'%name)
+        #df = pd.read_csv(DATA_DIR + '/split/train_0/%s.csv'%name)
+        df = pd.read_csv('/data/kaggle/doodle/train_use/'+name+'.csv')
+        df_valid = pd.read_csv('/data/kaggle/doodle/valid/'+name+'.csv')
+        #df_valid = pd.read_csv(DATA_DIR + '/split/valid_0/%s.csv'%name)
         ## countrycode,drawing,key_id,recognized,timestamp,word
 
 
         key_id = df['key_id'].values.astype(np.int64)
-        np.random.shuffle(key_id)
-
-        N = len(key_id)
-        N_valid = 80
-        N_train = N - N_valid
-
-        np.save( all_dir+'/%s.npy'%name, key_id)
-        np.save( train_dir+'/%s.npy'%name, key_id[:N_train])
-        np.save( valid_dir+'/%s.npy'%name, key_id[N_train:])
+        key_id_valid = df_valid['key_id'].values.astype(np.int64)
+        np.save( '/data/kaggle/doodle/np_train'+'/%s.npy'%name, key_id)
+        np.save( '/data/kaggle/doodle/np_valid'+'/%s.npy'%name, key_id_valid)
+        #np.save( train_dir+'/%s.npy'%name, key_id)
+        #np.save( valid_dir+'/%s.npy'%name, key_id_valid)
 
 
         #save as text
@@ -213,12 +228,24 @@ def run_process1():
 
 # main #################################################################
 if __name__ == '__main__':
-    print( '%s: calling main function ... ' % os.path.basename(__file__))
+    print( '%s: calling main function ... ' % FILE_NAME)
 
     #run_simple_to_image()
     make_split()
 
     #run_process1()
+
+
+
+
+# In[17]:
+
+
+DATA_DIR='/data/kaggle/doodle'
+
+
+# In[ ]:
+
 
 
 
