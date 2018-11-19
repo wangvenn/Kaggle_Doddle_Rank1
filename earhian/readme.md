@@ -7,5 +7,6 @@ results:
 | xception(2TTA) | 96  | 110k| 0.891 | 0.940 |
 | xception(10TTA)| 96  | 110k| 0.891 | 0.941 |
 | xception(10TTA)| 96  | all | 0.894 | 0.941 |
+| xception(10TTA)| 96  | all+110k | 0.894 | 0.942 |
 
 
