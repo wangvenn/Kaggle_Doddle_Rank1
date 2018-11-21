@@ -153,7 +153,7 @@ def drawing_to_image_with_color_aug_multi_channel_grey(drawing, H, W, seq, chann
         P_part = 0
         for t in range(int(ct*T/cts), int((ct+1)*T/cts)):
             P_part += len(norm_point[time==t])
-        print(P_part)
+
         if P_part > 0:
             #use grey color
             colors = plt.cm.gray(np.arange(0,P_part+1)/(P_part))
