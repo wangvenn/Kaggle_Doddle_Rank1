@@ -9,5 +9,6 @@ results:
 | xception(10TTA)| 96  | all | 0.894 | 0.941 |
 | xception(10TTA)| 96  | all+110k | 0.894 | 0.942 |
 | inceptionv4(10TTA)| 96  | all | 0.894 | 0.941 |
+| inceptionv4+xcepttion(10TTA)| 96  | all | 0.894 | 0.943 |
 
 
