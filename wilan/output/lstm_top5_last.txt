@@ -1,0 +1,165 @@
+LSTM model with CNN weights (from global average pool - Xception 128x128) combined. CNN weights were frozen.
+
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_12 (InputLayer)           (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+lambda_23 (Lambda)              (None, 128, 128, 3)  0           input_12[0][0]                   
+__________________________________________________________________________________________________
+lambda_24 (Lambda)              (None, 128, 128, 3)  0           input_12[0][0]                   
+__________________________________________________________________________________________________
+model_23 (Model)                (None, 340)          21558140    lambda_23[0][0]                  
+                                                                 lambda_24[0][0]                  
+__________________________________________________________________________________________________
+dense_18 (Concatenate)          (None, 340)          0           model_23[1][0]                   
+                                                                 model_23[2][0]                   
+==================================================================================================
+Total params: 21,558,140
+Trainable params: 21,503,612
+Non-trainable params: 54,528
+__________________________________________________________________________________________________
+None
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_13 (InputLayer)           (None, None, 3)      0                                            
+__________________________________________________________________________________________________
+lambda_25 (Lambda)              (None, None, 3)      0           input_13[0][0]                   
+__________________________________________________________________________________________________
+lambda_26 (Lambda)              (None, None, 3)      0           input_13[0][0]                   
+__________________________________________________________________________________________________
+model_26 (Model)                (None, 340)          5611360     lambda_25[0][0]                  
+                                                                 lambda_26[0][0]                  
+__________________________________________________________________________________________________
+dense_20 (Concatenate)          (None, 340)          0           model_26[1][0]                   
+                                                                 model_26[2][0]                   
+==================================================================================================
+Total params: 5,611,360
+Trainable params: 5,610,330
+Non-trainable params: 1,030
+__________________________________________________________________________________________________
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_14 (InputLayer)           (None, None, 3)      0                                            
+__________________________________________________________________________________________________
+input_15 (InputLayer)           (None, 128, 128, 3)  0                                            
+__________________________________________________________________________________________________
+lambda_27 (Lambda)              (None, None, 3)      0           input_14[0][0]                   
+__________________________________________________________________________________________________
+lambda_28 (Lambda)              (None, 128, 128, 3)  0           input_15[0][0]                   
+__________________________________________________________________________________________________
+lambda_29 (Lambda)              (None, None, 3)      0           input_14[0][0]                   
+__________________________________________________________________________________________________
+lambda_30 (Lambda)              (None, 128, 128, 3)  0           input_15[0][0]                   
+__________________________________________________________________________________________________
+model_29 (Model)                (None, 340)          28615304    lambda_27[0][0]                  
+                                                                 lambda_28[0][0]                  
+                                                                 lambda_29[0][0]                  
+                                                                 lambda_30[0][0]                  
+__________________________________________________________________________________________________
+dense_23 (Concatenate)          (None, 340)          0           model_29[1][0]                   
+                                                                 model_29[2][0]                   
+==================================================================================================
+Total params: 28,615,304
+Trainable params: 7,752,794
+Non-trainable params: 20,862,510
+
+Epoch 1/75
+2929/2929 [==============================] - 3318s 1s/step - loss: 0.6553 - categorical_accuracy: 0.8298 - top_3_accuracy: 0.9401 - val_loss: 0.5676 - val_categorical_accuracy: 0.8485 - val_top_3_accuracy: 0.9507
+
+Epoch 00001: val_loss improved from inf to 0.56758, saving model to lstm_cnn_comb_weights.best.hdf5
+
+Epoch 00001: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 2/75
+2929/2929 [==============================] - 3304s 1s/step - loss: 0.5721 - categorical_accuracy: 0.8480 - top_3_accuracy: 0.9499 - val_loss: 0.5241 - val_categorical_accuracy: 0.8581 - val_top_3_accuracy: 0.9550
+
+Epoch 00002: val_loss improved from 0.56758 to 0.52411, saving model to lstm_cnn_comb_weights.best.hdf5
+
+Epoch 00002: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 3/75
+2929/2929 [==============================] - 3304s 1s/step - loss: 0.5825 - categorical_accuracy: 0.8463 - top_3_accuracy: 0.9485 - val_loss: 0.5344 - val_categorical_accuracy: 0.8557 - val_top_3_accuracy: 0.9535
+
+Epoch 00003: val_loss did not improve from 0.52411
+
+Epoch 00003: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 4/75
+2929/2929 [==============================] - 3311s 1s/step - loss: 0.5856 - categorical_accuracy: 0.8455 - top_3_accuracy: 0.9482 - val_loss: 0.5374 - val_categorical_accuracy: 0.8557 - val_top_3_accuracy: 0.9534
+
+Epoch 00004: val_loss did not improve from 0.52411
+
+Epoch 00004: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 5/75
+2929/2929 [==============================] - 3311s 1s/step - loss: 0.5789 - categorical_accuracy: 0.8471 - top_3_accuracy: 0.9488 - val_loss: 0.5367 - val_categorical_accuracy: 0.8561 - val_top_3_accuracy: 0.9533
+
+Epoch 00005: val_loss did not improve from 0.52411
+
+Epoch 00005: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 6/75
+2929/2929 [==============================] - 3301s 1s/step - loss: 0.5802 - categorical_accuracy: 0.8472 - top_3_accuracy: 0.9486 - val_loss: 0.5409 - val_categorical_accuracy: 0.8545 - val_top_3_accuracy: 0.9528
+
+Epoch 00006: val_loss did not improve from 0.52411
+
+Epoch 00006: saving model to lstm_cnn_comb_weights.cur.hdf5
+
+Epoch 00006: ReduceLROnPlateau reducing learning rate to 0.0006600000313483179.
+Epoch 7/75
+2929/2929 [==============================] - 3314s 1s/step - loss: 0.5712 - categorical_accuracy: 0.8498 - top_3_accuracy: 0.9494 - val_loss: 0.5334 - val_categorical_accuracy: 0.8569 - val_top_3_accuracy: 0.9538
+
+Epoch 00007: val_loss did not improve from 0.52411
+
+Epoch 00007: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 8/75
+2929/2929 [==============================] - 3321s 1s/step - loss: 0.5651 - categorical_accuracy: 0.8507 - top_3_accuracy: 0.9503 - val_loss: 0.5369 - val_categorical_accuracy: 0.8561 - val_top_3_accuracy: 0.9526
+
+Epoch 00008: val_loss did not improve from 0.52411
+
+Epoch 00008: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 9/75
+2929/2929 [==============================] - 3307s 1s/step - loss: 0.5601 - categorical_accuracy: 0.8521 - top_3_accuracy: 0.9506 - val_loss: 0.5339 - val_categorical_accuracy: 0.8564 - val_top_3_accuracy: 0.9540
+
+Epoch 00009: val_loss did not improve from 0.52411
+
+Epoch 00009: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 10/75
+2929/2929 [==============================] - 3314s 1s/step - loss: 0.5819 - categorical_accuracy: 0.8473 - top_3_accuracy: 0.9482 - val_loss: 0.5289 - val_categorical_accuracy: 0.8583 - val_top_3_accuracy: 0.9538
+
+Epoch 00010: val_loss did not improve from 0.52411
+
+Epoch 00010: saving model to lstm_cnn_comb_weights.cur.hdf5
+
+Epoch 00010: ReduceLROnPlateau reducing learning rate to 0.00043560001300647856.
+Epoch 11/75
+2929/2929 [==============================] - 3309s 1s/step - loss: 0.5636 - categorical_accuracy: 0.8512 - top_3_accuracy: 0.9503 - val_loss: 0.5244 - val_categorical_accuracy: 0.8594 - val_top_3_accuracy: 0.9542
+
+Epoch 00011: val_loss did not improve from 0.52411
+
+Epoch 00011: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 12/75
+2929/2929 [==============================] - 3311s 1s/step - loss: 0.5471 - categorical_accuracy: 0.8552 - top_3_accuracy: 0.9520 - val_loss: 0.5439 - val_categorical_accuracy: 0.8553 - val_top_3_accuracy: 0.9526
+
+Epoch 00012: val_loss did not improve from 0.52411
+
+Epoch 00012: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 13/75
+2929/2929 [==============================] - 3324s 1s/step - loss: 0.5515 - categorical_accuracy: 0.8544 - top_3_accuracy: 0.9516 - val_loss: 0.5445 - val_categorical_accuracy: 0.8551 - val_top_3_accuracy: 0.9524
+
+Epoch 00013: val_loss did not improve from 0.52411
+
+Epoch 00013: saving model to lstm_cnn_comb_weights.cur.hdf5
+Epoch 14/75
+2929/2929 [==============================] - 3325s 1s/step - loss: 0.5541 - categorical_accuracy: 0.8536 - top_3_accuracy: 0.9513 - val_loss: 0.5381 - val_categorical_accuracy: 0.8565 - val_top_3_accuracy: 0.9528
+
+Epoch 00014: val_loss did not improve from 0.52411
+
+Epoch 00014: saving model to lstm_cnn_comb_weights.cur.hdf5
+
+Epoch 00014: ReduceLROnPlateau reducing learning rate to 0.00028749599936418236.
+Epoch 15/75
+2929/2929 [==============================] - 3327s 1s/step - loss: 0.5503 - categorical_accuracy: 0.8545 - top_3_accuracy: 0.9516 - val_loss: 0.5370 - val_categorical_accuracy: 0.8574 - val_top_3_accuracy: 0.9531
+
+Epoch 00015: val_loss did not improve from 0.52411
+
+Map3 Validation on 5% training set: 0.892
+Public LB: 0.941
