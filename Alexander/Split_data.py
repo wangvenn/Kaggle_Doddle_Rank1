@@ -4,9 +4,9 @@
 # In[14]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
+#get_ipython().run_line_magic('matplotlib', 'inline')
+#from IPython.core.interactiveshell import InteractiveShell
+#InteractiveShell.ast_node_interactivity = "all"
 from sklearn.model_selection import train_test_split
 import ast
 import os
@@ -20,7 +20,7 @@ import gc
 # In[15]:
 
 
-path = '/data/kaggle/doodle/'
+path = '/rscratch/xuanyu/KAIL/Kaggle_Doddle_Rank1/data/'#'/data/kaggle/doodle/'
 
 
 # In[16]:
@@ -41,7 +41,7 @@ for file in files:
 # In[18]:
 
 
-sample_num = 65000
+sample_num = 100000
 valid_num = 80
 
 

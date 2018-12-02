@@ -1,7 +1,7 @@
 from common import *
 from imgaug import augmenters as iaa
 
-
+DATA_DIR = '/rscratch/xuanyu/KAIL/Kaggle_Doddle_Rank1/data/'
 CLASS_NAME=\
 ['The_Eiffel_Tower', 'The_Great_Wall_of_China', 'The_Mona_Lisa', 'airplane', 'alarm_clock', 'ambulance', 'angel',
  'animal_migration', 'ant', 'anvil', 'apple', 'arm', 'asparagus', 'axe', 'backpack', 'banana', 'bandage', 'barn',
@@ -301,7 +301,7 @@ class DoodleDataset(Dataset):
                     name = name.replace('_', ' ')
 
                     #df = pd.read_csv(DATA_DIR + '/split/%s/%s.csv'%(split,name))
-                    df = pd.read_csv('/data/kaggle/doodle/train_use/'+name+'.csv')
+                    df = pd.read_csv(DATA_DIR+'train_use/'+name+'.csv')
                     TRAIN_DF.append(df)
                 print('')
             self.df = TRAIN_DF
@@ -313,7 +313,7 @@ class DoodleDataset(Dataset):
                 df = TRAIN_DF[l]
                 #key_id = np.loadtxt(DATA_DIR + '/split/%s/%s'%(split,name), np.int64)
                 #key_id = np.load(DATA_DIR + '/split/%s/%s.npy'%(split,name))
-                key_id = np.load('/data/kaggle/doodle/np_train/%s.npy'%name)
+                key_id = np.load(DATA_DIR+'np_train/%s.npy'%name)
                 label = np.full(len(key_id),l,np.int64)
                 drawing_id = df.loc[df['key_id'].isin(key_id)].index.values
                 self.id.append(
@@ -332,7 +332,7 @@ class DoodleDataset(Dataset):
                     name = name.replace('_', ' ')
 
                     #df = pd.read_csv(DATA_DIR + '/split/%s/%s.csv'%(split,name))
-                    df = pd.read_csv('/data/kaggle/doodle/valid/'+name+'.csv')
+                    df = pd.read_csv(DATA_DIR+'valid/'+name+'.csv')
                     TRAIN_DF.append(df)
                 print('')
             self.df = TRAIN_DF
@@ -344,7 +344,7 @@ class DoodleDataset(Dataset):
                 df = TRAIN_DF[l]
                 #key_id = np.loadtxt(DATA_DIR + '/split/%s/%s'%(split,name), np.int64)
                 #key_id = np.load(DATA_DIR + '/split/%s/%s.npy'%(split,name))
-                key_id = np.load('/data/kaggle/doodle/np_valid/%s.npy'%name)
+                key_id = np.load(DATA_DIR+'np_valid/%s.npy'%name)
                 label = np.full(len(key_id),l,np.int64)
                 drawing_id = df.loc[df['key_id'].isin(key_id)].index.values
                 self.id.append(

@@ -15,8 +15,8 @@ matplotlib.use('TkAgg')
 #matplotlib.use('WXAgg')
 #matplotlib.use('Qt4Agg')
 #matplotlib.use('Qt5Agg') #Qt4Agg
-print(matplotlib.get_backend())
-#print(matplotlib.__version__)
+#print(matplotlib.get_backend())
+##print(matplotlib.__version__)
 
 
 # torch libs

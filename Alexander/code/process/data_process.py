@@ -11,7 +11,7 @@ sys.path.append("..")
 # In[15]:
 
 
-FILE_NAME = '80k'
+FILE_NAME = '100k'
 
 
 # In[16]:
@@ -25,7 +25,7 @@ from common import *
 
 
 DATA_DIR = '../'
-
+DATA_DIR = '/rscratch/xuanyu/KAIL/Kaggle_Doddle_Rank1/data/'
 
 
 CLASS_NAME=['The_Eiffel_Tower', 'The_Great_Wall_of_China', 'The_Mona_Lisa', 'airplane', 'alarm_clock', 'ambulance', 'angel',
@@ -188,16 +188,16 @@ def make_split():
         print(name)
 
         #df = pd.read_csv(DATA_DIR + '/split/train_0/%s.csv'%name)
-        df = pd.read_csv('/data/kaggle/doodle/train_use/'+name+'.csv')
-        df_valid = pd.read_csv('/data/kaggle/doodle/valid/'+name+'.csv')
+        df = pd.read_csv(DATA_DIR+'/train_use/'+name+'.csv')
+        df_valid = pd.read_csv(DATA_DIR+'/valid/'+name+'.csv')
         #df_valid = pd.read_csv(DATA_DIR + '/split/valid_0/%s.csv'%name)
         ## countrycode,drawing,key_id,recognized,timestamp,word
 
 
         key_id = df['key_id'].values.astype(np.int64)
         key_id_valid = df_valid['key_id'].values.astype(np.int64)
-        np.save( '/data/kaggle/doodle/np_train'+'/%s.npy'%name, key_id)
-        np.save( '/data/kaggle/doodle/np_valid'+'/%s.npy'%name, key_id_valid)
+        np.save( DATA_DIR+'/np_train'+'/%s.npy'%name, key_id)
+        np.save( DATA_DIR+'/np_valid'+'/%s.npy'%name, key_id_valid)
         #np.save( train_dir+'/%s.npy'%name, key_id)
         #np.save( valid_dir+'/%s.npy'%name, key_id_valid)
 
