@@ -414,22 +414,22 @@ while  iter<num_iters:
         #net.set_mode('train',is_freeze_bn=True)
         #net.set_mode('train')
         net.train()
-        input = input.to('cuda:0')
-        truth = truth.to('cuda:0')
-        #inputs, targets_a, targets_b, lam = mixup_data(input, truth, 0.2, True)
+        #input = input.to('cuda:0')
+        #truth = truth.to('cuda:0')
+        inputs, targets_a, targets_b, lam = mixup_data(input, truth, 0.0005, True)
         #print(next(net.parameters()).is_cuda) 
-        logit = net(input)#data_parallel(net,input) #net(input)
-        #del input
-        #targets_a = targets_a.cuda() 
-        #loss = mixup_criterion(criterion, logit, targets_a, targets_b.cuda(), lam)
-        #precision, top = metric(logit, targets_a)
-        #loss.backward()
-        #optimizer.step()
-        #optimizer.zero_grad()
+        logit = net(inputs)#data_parallel(net,input) #net(input)
+        del input,inputs
+        targets_a = targets_a.cuda() 
+        loss = mixup_criterion(criterion, logit, targets_a, targets_b.cuda(), lam)
+        precision, top = metric(logit, targets_a)
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
         
         
-        #del logit, targets_a, targets_b
-        #gc.collect()
+        del logit, targets_a, targets_b
+        gc.collect()
         
         #precision, top = metric(logit, targets_a)
         
@@ -437,13 +437,13 @@ while  iter<num_iters:
         #    input = input.cuda()
         #    truth = truth.cuda()
         #    logit = data_parallel(net, input)
-        loss  = criterion(logit, truth)
-        precision, top = metric(logit, truth)
+        #loss  = criterion(logit, truth)
+        #precision, top = metric(logit, truth)
 
 
-        loss.backward()
-        optimizer.step()
-        optimizer.zero_grad()
+        #loss.backward()
+        #optimizer.step()
+        #optimizer.zero_grad()
         #torch.nn.utils.clip_grad_norm(net.parameters(), 1)
 
 

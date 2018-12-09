@@ -203,7 +203,7 @@ def do_valid( net, valid_loader, criterion ):
 
 fold    = 0
 out_dir =     '../../densenet'
-initial_checkpoint = '/rscratch/xuanyu/KAIL/Kaggle_Doddle_Rank1/Alexander/densenet/checkpoint/00500000_model.pth'#'densenet201.pth'#None #\
+initial_checkpoint = '/rscratch/xuanyu/KAIL/Kaggle_Doddle_Rank1/Alexander/densenet/checkpoint/00566000_model.pth'#'densenet201.pth'#None #\
         #'../../output/backup/873_crop.pth'
 
 pretrain_file = None
@@ -316,7 +316,7 @@ iter_log    = 50
 iter_valid  = 2500
 iter_save   = [0, num_iters-1]               + list(range(0, num_iters, iter_save_interval))#1*1000
 
-start_iter = 500000
+start_iter = 566000
 start_epoch= 0
 rate       = 0
 if initial_checkpoint is not None:
@@ -422,7 +422,7 @@ while  iter<num_iters:
         #input = input.to('cuda:0')
         #truth = truth.to('cuda:0')
         
-        inputs, targets_a, targets_b, lam = mixup_data(input, truth, 0.001, True)
+        inputs, targets_a, targets_b, lam = mixup_data(input, truth, 0.05, True)
         #print(next(net.parameters()).is_cuda) 
         logit = net(inputs.to('cuda:0'))
         #logit = net(input)#data_parallel(net,input) #net(input)
